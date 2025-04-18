@@ -34,4 +34,3 @@ Aplikasi Android sederhana yang menampilkan artikel dari Spaceflight News API. D
 - **Database lokal (Room)** untuk menyimpan user login.
 - **SharedPreferences** atau cache data untuk persistensi list terakhir.
 
-## 📂 Struktur Folder (Sederhana)
