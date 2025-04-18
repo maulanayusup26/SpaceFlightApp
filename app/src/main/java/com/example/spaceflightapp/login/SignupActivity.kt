@@ -44,7 +44,7 @@ class SignupActivity : AppCompatActivity() {
         signupViewModel.signupState.observe(this) { isSuccess ->
             if (isSuccess) {
                 Toast.makeText(this, "Signup berhasil! Silakan login.", Toast.LENGTH_SHORT).show()
-                finish() // Kembali ke login
+                finish()
             }
         }
 

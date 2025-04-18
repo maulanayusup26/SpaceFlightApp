@@ -48,7 +48,6 @@ class ArticleDetailActivity : AppCompatActivity() {
         return localDateFormat.format(date)
     }
 
-    // Fungsi untuk mengambil ringkasan (1 kalimat sebelum titik)
     private fun getSummary(summary: String): String {
         val sentenceEndIndex = summary.indexOf(".")
         return if (sentenceEndIndex != -1) {
@@ -105,7 +104,6 @@ class ArticleDetailActivity : AppCompatActivity() {
         binding.tvPublishDate.text = formatDateToLocalTime(date)
         binding.tvSummary.text = getSummary(summary)
 
-        // Load gambar
         Glide.with(this@ArticleDetailActivity)
             .load(imgUrl)
             .into(binding.ivArticleImage)

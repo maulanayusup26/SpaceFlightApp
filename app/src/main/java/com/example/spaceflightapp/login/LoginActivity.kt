@@ -44,7 +44,6 @@ class LoginActivity : AppCompatActivity() {
                     is com.example.spaceflightapp.viewmodel.Result.Success -> {
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
-//                        Toast.makeText(this, result.message, Toast.LENGTH_SHORT).show()
                     }
                 }
             })

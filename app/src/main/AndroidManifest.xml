@@ -34,7 +34,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Auth0 Redirect Activity -->
+        </activity>
         <activity
             android:name="com.auth0.android.provider.RedirectActivity"
             android:exported="true"

@@ -1,7 +1,6 @@
 package com.example.spaceflightapp.repository
 
 import com.example.spaceflightapp.data.ApiClient
-import com.example.spaceflightapp.data.Auth0Api
 import com.example.spaceflightapp.data.SignupRequest
 
 class AuthRepository {

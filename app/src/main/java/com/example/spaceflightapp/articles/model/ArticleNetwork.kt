@@ -1,6 +1,5 @@
 package com.example.spaceflightapp.articles.model
 
-import com.google.gson.annotations.SerializedName
 
 data class ArticleNetwork(
     val id: Int,

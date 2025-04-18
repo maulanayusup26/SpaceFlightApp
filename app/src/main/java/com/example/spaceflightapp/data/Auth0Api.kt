@@ -1,11 +1,7 @@
 package com.example.spaceflightapp.data
 
-import com.example.spaceflightapp.articles.model.ApiResponse
-import com.example.spaceflightapp.articles.model.Article
-import com.example.spaceflightapp.articles.model.ArticleItem
 import com.example.spaceflightapp.articles.model.ArticleResponse
 import com.example.spaceflightapp.articles.model.BlogDetailResponse
-import retrofit2.Call
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET

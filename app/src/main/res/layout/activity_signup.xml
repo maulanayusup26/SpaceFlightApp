@@ -11,7 +11,6 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <!-- Logo -->
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="120dp"
@@ -19,7 +18,6 @@
             android:layout_marginTop="48dp"
             android:layout_marginBottom="24dp" />
 
-        <!-- Title -->
         <TextView
             android:id="@+id/tvSignupTitle"
             android:layout_width="wrap_content"
@@ -29,7 +27,6 @@
             android:textStyle="bold"
             android:layout_marginBottom="24dp" />
 
-        <!-- Email -->
         <EditText
             android:id="@+id/etEmail"
             android:layout_width="match_parent"
@@ -40,7 +37,6 @@
             android:background="@drawable/bg_edittext"
             android:layout_marginBottom="16dp" />
 
-        <!-- Password -->
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
@@ -61,7 +57,6 @@
             android:background="@drawable/bg_edittext"
             android:layout_marginBottom="24dp" />
 
-        <!-- Signup Button -->
         <Button
             android:id="@+id/btnSignup"
             android:layout_width="match_parent"
@@ -70,7 +65,6 @@
             android:textColor="@android:color/white"
             android:layout_marginBottom="16dp" />
 
-        <!-- Already have an account -->
         <TextView
             android:id="@+id/tvAlreadyHaveAccount"
             android:layout_width="wrap_content"

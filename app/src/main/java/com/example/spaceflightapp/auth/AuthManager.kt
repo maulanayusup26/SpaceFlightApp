@@ -18,21 +18,18 @@ class AuthManager(context: Context) {
         .withScope("openid profile email")
         .withAudience("https://dev-fkuc7krfmyrfa8sj.us.auth0.com/userinfo")
 
-    // Fungsi untuk login
     fun login(activity: Activity, callback: Callback<Credentials, AuthenticationException>) {
         authentication.start(activity, callback)
     }
 
-    // Fungsi untuk logout
     fun logout(context: Context, callback: (Void?, AuthenticationException?) -> Unit) {
         val activity = context as? Activity
         if (activity != null) {
-            // Jika context adalah Activity, langsung lakukan logout
             WebAuthProvider.logout(account)
                 .withScheme("demo")
                 .start(activity, object : Callback<Void?, AuthenticationException> {
                     override fun onSuccess(result: Void?) {
-                        callback(result, null)  // Panggil callback sukses
+                        callback(result, null)
                     }
 
                     override fun onFailure(error: AuthenticationException) {
@@ -40,12 +37,10 @@ class AuthManager(context: Context) {
                     }
                 })
         } else {
-            // Jika context bukan Activity (misalnya di Service atau background), lakukan logout melalui intent
-            val intent = Intent(context, MainActivity::class.java)  // Ganti dengan Activity yang sesuai
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK  // Agar bisa membuka Activity meski dari background
+            val intent = Intent(context, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(intent)
 
-            // Panggil logout dengan object callback
             if (activity != null) {
                 WebAuthProvider.logout(account)
                     .withScheme("demo")

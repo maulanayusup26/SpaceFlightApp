@@ -1,7 +1,5 @@
 package com.example.spaceflightapp.articles.adapter
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,9 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.spaceflightapp.R
-import com.example.spaceflightapp.articles.model.Article
 import com.example.spaceflightapp.articles.model.ArticleItem
-import com.example.spaceflightapp.articles.ui.ArticleDetailActivity
 
 class ArticleItemAdapter(private val articleList: List<ArticleItem>,
                          private val onItemClick: (ArticleItem) -> Unit) : RecyclerView.Adapter<ArticleItemAdapter.ArticleViewHolder>() {
@@ -30,16 +26,13 @@ class ArticleItemAdapter(private val articleList: List<ArticleItem>,
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         val article = articleList[position]
 
-        // Set article title
         holder.articleTitle.text = article.title
-
-        // Load article image using Glide or any image loading library
         Glide.with(holder.itemView.context)
-            .load(article.image_url) // Assuming article.imageUrl contains the URL of the image
+            .load(article.image_url)
             .into(holder.articleImage)
 
         holder.itemView.setOnClickListener {
-            onItemClick(article) // Panggil callback ke luar
+            onItemClick(article)
         }
     }
 

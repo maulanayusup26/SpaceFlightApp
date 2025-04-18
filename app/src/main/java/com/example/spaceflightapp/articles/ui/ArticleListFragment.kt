@@ -76,7 +76,7 @@ class ArticleListFragment : Fragment() {
             else -> "Good Evening"
         }
         binding.tvUcapan.text = greeting
-        binding.tvUsername.text = "Maulana Yusup" // replace with actual username
+        binding.tvUsername.text = "Maulana Yusup"
     }
 
     override fun onDestroyView() {
